@@ -1,0 +1,18 @@
+<div class="mainContainer">
+    <div class="inputContainer">
+        <label class="heading">Dictionary</label>
+        <input class="form-control form-control-sm inputField" type="text" [(ngModel)]="word" placeholder="Enter word"/>
+        <button (click)="onSubmit()" class="btn btn-primary" type="button">
+          Search
+        </button>
+      </div>
+      <div class="outputContainer" *ngIf="response.length>0">
+        <h1>{{searchword}}</h1>
+        <ul>
+          <li  *ngFor="let defination of response">
+            {{ defination }}
+          </li>
+        </ul>
+      </div>
+      
+</div>
